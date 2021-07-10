@@ -1,0 +1,162 @@
+.main-head {
+  width: 95%;
+  margin: 0 0 0 auto;
+}
+nav {
+  @include flex(space-between, center, row);
+  min-height: 10vh;
+  width: 60%;
+  flex-wrap: wrap;
+  .logo {
+    @include flex(flex-start, center, row);
+    flex: 1 1 40rem;
+    h1 {
+      margin: 3rem 2rem;
+    }
+  }
+  ul {
+    @include flex(space-between, center, row);
+    flex: 1 1 40rem;
+  }
+}
+.intro {
+  height: 90vh;
+  width: 90%;
+  margin: auto;
+  flex-wrap: wrap;
+  @include flex(space-between, center, row);
+  h2 {
+    font-size: 6.5rem;
+    padding-top: 2rem;
+    background: $gradient;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+  }
+  h3 {
+    font-size: 4rem;
+    padding-top: 1.3rem;
+  }
+  p {
+    padding-top: 1.3rem;
+    line-height: 1.6;
+    color: $gray-text;
+  }
+}
+.splash {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  height: 100%;
+  z-index: -1;
+}
+.intro-social {
+  margin-top: 3rem;
+  a {
+    margin-right: 5rem;
+  }
+}
+.active {
+  background: $gray-text;
+  color: white;
+  padding: 0.8rem 3rem;
+  border-radius: 2rem;
+}
+.intro-text,
+.intro-img {
+  flex: 1 1 40rem;
+}
+#plant-left {
+  animation: plant 1.5s ease infinite alternate;
+}
+#plant-right {
+  animation: plant 1.5s ease infinite alternate 0.5s;
+}
+#me {
+  animation: me 1s ease infinite alternate;
+  transform-origin: bottom;
+}
+#clock-arrow {
+  animation: clock 1.5s linear infinite;
+  transform-box: fill-box;
+  transform-origin: bottom;
+}
+@keyframes me {
+  from {
+    transform: rotateZ(-6deg);
+  }
+  to {
+    transform: rotateZ(6deg);
+  }
+}
+@keyframes plant {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-30%);
+  }
+}
+
+@keyframes clock {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+.skills {
+  min-height: 100vh;
+  text-align: center;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  h2 {
+    margin-top: 12rem;
+  }
+  .skills-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 12rem 0rem;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    flex-wrap: wrap;
+    gap: 5rem;
+    .js,
+    .react,
+    .jquery,
+    .style,
+    .ecma,
+    .html,
+    .css,
+    .sass,
+    .git,
+    .github,
+    .redux,
+    .thunk,
+    .bootstrap,
+    .ajax {
+      border-radius: 50%;
+      position: relative;
+      border: 3px solid #37bdb8;
+      height: 15rem;
+      width: 15rem;
+      // justify-self: center;
+      h3 {
+        position: absolute;
+        // background: $gradient;
+        // -webkit-background-clip: text;
+        // background-clip: text;
+        // -webkit-text-fill-color: transparent;
+        top: 50%;
+        left: 50%;
+        font-size: 1.9rem;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}

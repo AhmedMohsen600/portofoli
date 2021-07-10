@@ -1,0 +1,39 @@
+.projects {
+  width: 95%;
+  margin: auto;
+  min-height: 100vh;
+  flex-wrap: wrap;
+  text-align: center;
+  @include flex(space-between, center, row);
+  margin-bottom: 4rem;
+}
+
+.cool-girl,
+.ignite,
+.capture,
+.color,
+.music {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin-top: 10rem;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5rem 0rem;
+  border-radius: 1rem;
+  transition: 1s;
+  h2 {
+    text-align: center;
+    padding-bottom: 5rem;
+  }
+}
+.music,
+.capture,
+.cool-girl,
+.color,
+.ignite {
+  img {
+    width: 90%;
+    object-fit: cover;
+    border-radius: 1rem;
+  }
+}

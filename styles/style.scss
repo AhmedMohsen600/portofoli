@@ -1,0 +1,110 @@
+$header1: 2.5rem;
+$header2: 4rem;
+$header3: 2.5rem;
+$header4: 2.5rem;
+$text: 2.5rem;
+$gradient: linear-gradient(left, #38d39f, #38a4d3);
+$background-color: #154353;
+$gray-text: #2c2c2c;
+
+@mixin flex($justfiy, $align, $derction) {
+  display: flex;
+  justify-content: $justfiy;
+  align-items: $align;
+  flex-direction: $derction;
+}
+@import "global";
+@import "intro";
+@import "projects";
+@import "contact";
+@import "footer";
+
+@media screen and (max-width: 1238px) {
+  html {
+    font-size: 46%;
+  }
+  .splash {
+    display: none;
+  }
+  svg {
+    width: 80%;
+  }
+  nav {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 727px) {
+  svg {
+    height: 60%;
+    margin-bottom: 4rem;
+  }
+  .main-head {
+    width: 100%;
+  }
+
+  .skills-info {
+    padding-bottom: 5.5rem;
+  }
+
+  nav {
+    .logo {
+      @include flex(center, center, column);
+      flex: 1 1 50rem;
+      margin-top: 2rem;
+    }
+    ul {
+      flex: 1 1 60rem;
+      margin: 2rem 10rem;
+      @include flex(space-around, center, row);
+    }
+  }
+  .intro-text {
+    margin-top: 1rem;
+    text-align: center;
+  }
+  .intro-img {
+    text-align: center;
+  }
+  .intro-social {
+    @include flex(center, center, row);
+    a {
+      margin: 2rem;
+    }
+  }
+  .cool-girl,
+  .music,
+  .ignite,
+  .capture {
+    flex: 1 1 50rem;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  footer {
+    min-height: 9vh;
+    h4 {
+      padding-bottom: 4rem;
+      padding-top: 2rem;
+      text-align: center;
+    }
+    ul {
+      padding-bottom: 2rem;
+    }
+  }
+  .form-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .info {
+      height: 100%;
+      margin-bottom: 20rem;
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  nav {
+    width: 99%;
+  }
+}
